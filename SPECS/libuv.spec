@@ -15,7 +15,7 @@
 %global somajor 1
 
 # Doing release_prefix this way for Release allows for OBS-proof versioning, See EA-4590 for more details
-%define release_prefix 1
+%define release_prefix 2
 
 Name: %{?scl_prefix}libuv
 Epoch:   1
@@ -136,6 +136,9 @@ sed -e "s#@prefix@#%{_prefix}#g" \
 %{_includedir}/uv-private
 
 %changelog
+* Tue Dec 28 2021 Dan Muey <dan@cpanel.net> - 1.11.0-2
+- ZC-9589: Update DISABLE_BUILD to match OBS
+
 * Thu Apr 13 2017 Rishwanth Yeddula <rish@cpanel.net> - 4.24-1
 - Initial package of libuv for the ea-ruby24 SCL
 
